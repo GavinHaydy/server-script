@@ -13,7 +13,7 @@ docker stop nginx
 docker rm -f nginx
 
 echo "==========================================================start nginx============================================================="
-docker run -d --name nginx -p 18080:80 -p 443:443 --restart=always -v /data/wwwroot/nginx/cert:/etc/nginx/ -v /data/wwwroot/nginx/nginx.conf:/etc/nginx/nginx.conf -v /data/wwwroot/nginx/logs:/var/log/nginx -v /data/wwwroot/nginx/html/:/usr/share/nginx/html -v /data/wwwroot/nginx/conf/:/etc/nginx/conf.d --privileged=true nginx
+docker run -itd --name nginx -p 18080:80 -p 443:443 --restart=always -v /etc/localtime:/etc/localtime -v /data/wwwroot/nginx/cert:/etc/nginx/ -v /data/wwwroot/nginx/nginx.conf:/etc/nginx/nginx.conf -v /data/wwwroot/nginx/logs:/var/log/nginx -v /data/wwwroot/nginx/html/:/usr/share/nginx/html -v /data/wwwroot/nginx/conf/:/etc/nginx/conf.d --privileged=true nginx
 docker ps
 
 #docker run -d  后台运行
