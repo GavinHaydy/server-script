@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "====================wrote by The-Ruffian===================="
+echo "====================write by The-Ruffian===================="
 
 #生成Dockerfile
 echo -e "FROM java:latest\nMAINTAINER the-ruffian\nADD demo-0.0.1-SNAPSHOT.jar bug-pz.jar\nEXPOSE 80 ENTRYPOINT ['java','-jar','bug-pz.jar']"
